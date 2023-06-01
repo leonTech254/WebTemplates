@@ -1,0 +1,137 @@
+/* global variables */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menuIcon
+{
+    display: none !important;
+}
+nav
+{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+.navItems
+{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: wheat;
+    padding-top: 20px;
+
+}
+.navItems li
+{
+    cursor: pointer;
+    padding: 10px;
+   
+}
+.navItems li:hover
+{
+    color: orange;
+    background-color: rgb(219, 238, 219);
+    border-radius: 30px;
+}
+.headerWrapper
+{
+    min-height: 100vh;
+    background: linear-gradient(to left,rgba(14, 43, 48, 0.318),rgba(0, 0, 128, 0.847)) ,url("./landingPage1.jpg");
+    background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+}
+
+.header-content
+{
+height: 70vh;
+display: flex;
+flex-direction: column;
+padding: 10px;
+width: 55%;
+justify-content: center;
+align-items: center;
+
+}
+.header-content span
+{
+    color: white;
+    font-weight: bold;
+}
+
+.btn
+{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    background: none;
+    background-color: orange;
+    border: none;
+    border-radius: 30px;
+    width: 10rem;
+    cursor: pointer;
+
+}
+.btn:active
+{
+    transform: scale(.9);
+}
+.active
+{
+    border-bottom: 2px solid orange;
+}
+
+
+/* media quaries */
+
+@media (max-width:500px)
+{
+    .navItems {
+        display: block;
+        background-color: navy;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+
+        transition: height 0.3s ease;
+        opacity: 0;
+    }
+    .menuIcon 
+    {
+        display: block !important;
+        position: absolute;
+        color: white;
+        font-size: 50px !important;
+        right: 0;
+        cursor: pointer;
+ 
+    }
+    .active
+    {
+        border: none;
+        color: orange;
+    }
+    .activeMenu
+    {
+        opacity: 1;
+        height: 300px;
+    }
+    .header-content
+    {
+        width: 100%;
+        margin-top: 100px;
+        
+    }
+    .header-content span
+    {
+        font-weight: lighter;
+    }
+
+}
